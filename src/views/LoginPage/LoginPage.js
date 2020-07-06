@@ -142,6 +142,8 @@ export default function LoginPage(props) {
                       Get started
                     </Button>
                   </CardFooter>
+                  <p className={classes.divider}>Нет аккаунта? Зарегистрируйся</p>
+
                 </form>
               </Card>
             </GridItem>

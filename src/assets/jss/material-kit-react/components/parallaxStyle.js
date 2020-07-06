@@ -1,3 +1,4 @@
+import {boxShadow} from '../../material-kit-react';
 const parallaxStyle = {
   parallax: {
     height: "90vh",
@@ -10,7 +11,8 @@ const parallaxStyle = {
     padding: "0",
     border: "0",
     display: "flex",
-    alignItems: "center"
+    alignItems: "center",
+    boxShadow: "0 0 0 500px rgba(0, 0, 0, 0.33) inset",
   },
   filter: {
     "&:before": {
@@ -24,7 +26,7 @@ const parallaxStyle = {
       display: "block",
       left: "0",
       top: "0",
-      content: "''"
+      content: "''",
     }
   },
   small: {

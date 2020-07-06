@@ -138,15 +138,15 @@ export default function HeaderLinks(props) {
         </Tooltip>
       </ListItem>
       <ListItem className={classes.listItem}>
+          <Link to={"/login-page"} className={classes.link}> 
             <Button
-              href="#pablo"
-              className={classes.registerNavLink}
-              onClick={e => e.preventDefault()}
               color="rose"
               round
                 >
                   Войти
               </Button>
+            </Link>
+            
         </ListItem>
     </List>
   );

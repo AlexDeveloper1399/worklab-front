@@ -4,18 +4,22 @@ const componentsStyle = {
   container,
   brand: {
     color: "#FFFFFF",
-    textAlign: "left"
+    textAlign: "left",
+    fontFamily: "'Sahitya', serif",
+    font: "Bold 700"
   },
   title: {
     fontSize: "4.2rem",
     fontWeight: "600",
     display: "inline-block",
-    position: "relative"
+    position: "relative",
+    // color: "#161748",
   },
   subtitle: {
     fontSize: "1.313rem",
     maxWidth: "500px",
-    margin: "10px 0 0"
+    margin: "10px 0 0",
+    // color: "#161748",
   },
   main: {
     background: "#FFFFFF",

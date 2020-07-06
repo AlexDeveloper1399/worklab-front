@@ -27,6 +27,8 @@ import SectionCompletedExamples from "./Sections/SectionCompletedExamples.js";
 import SectionLogin from "./Sections/SectionLogin.js";
 import SectionExamples from "./Sections/SectionExamples.js";
 import SectionDownload from "./Sections/SectionDownload.js";
+// import SectionContent from "./Sections/SectionContent.js";
+
 
 import styles from "assets/jss/material-kit-react/views/components.js";
 
@@ -48,7 +50,7 @@ export default function Components(props) {
         }}
         {...rest}
       />
-      <Parallax image={require("assets/img/4.jpg")}>
+      <Parallax image={require("assets/img/back.jpg")}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem>
@@ -71,7 +73,9 @@ export default function Components(props) {
         <SectionNotifications />
         <SectionTypography />
         <SectionJavascript /> */}
-        <SectionCarousel />
+        {/* <SectionContent /> */}
+
+        {/* <SectionLogin /> */}
         {/* <SectionCompletedExamples />
         <SectionLogin />
         <GridItem md={12} className={classes.textCenter}>
