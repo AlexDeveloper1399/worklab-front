@@ -90,6 +90,9 @@ const headerLinksStyle = theme => ({
     color: "inherit",
     backgroundColor: "rgba(255, 255, 255, 0.1)"
   },
+  navLinkWork: {
+    color: "inherit"
+  },
   icons: {
     width: "20px",
     height: "20px",

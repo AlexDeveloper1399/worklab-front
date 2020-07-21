@@ -56,7 +56,7 @@ export default function LoginPage(props) {
               <Card className={classes[cardAnimaton]}>
                 <form className={classes.form}>
                   <CardHeader color="primary" className={classes.cardHeader}>
-                    <h4>Login</h4>
+                    <h4>Registration</h4>
                     <div className={classes.socialLine}>
                       <Button
                         justIcon
@@ -105,6 +105,21 @@ export default function LoginPage(props) {
                       }}
                     />
                     <CustomInput
+                      labelText="Last Name..."
+                      id="last"
+                      formControlProps={{
+                        fullWidth: true
+                      }}
+                      inputProps={{
+                        type: "text",
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <People className={classes.inputIconsColor} />
+                          </InputAdornment>
+                        )
+                      }}
+                    />
+                    <CustomInput
                       labelText="Email..."
                       id="email"
                       formControlProps={{
@@ -137,14 +152,30 @@ export default function LoginPage(props) {
                         autoComplete: "off"
                       }}
                     />
+                    <CustomInput
+                      labelText="Confirm password"
+                      id="passConfirm"
+                      formControlProps={{
+                        fullWidth: true
+                      }}
+                      inputProps={{
+                        type: "password",
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <Icon className={classes.inputIconsColor}>
+                              lock_outline
+                            </Icon>
+                          </InputAdornment>
+                        ),
+                        autoComplete: "off"
+                      }}
+                    />
                   </CardBody>
                   <CardFooter className={classes.cardFooter}>
                     <Button simple color="primary" size="lg">
-                      Get started
+                      Sign Up!
                     </Button>
                   </CardFooter>
-                  <p className={classes.divider}>Нет аккаунта? <Link to="registration-page">Зарегистрируйся</Link></p>
-
                 </form>
               </Card>
             </GridItem>

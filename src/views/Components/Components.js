@@ -40,7 +40,7 @@ export default function Components(props) {
   return (
     <div>
       <Header
-        brand="YLSP"
+        brand={<img src={require("assets/img/logo-worklab.png")} width={65} height={65} />}
         rightLinks={<HeaderLinks />}
         fixed
         color="transparent"

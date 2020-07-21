@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
@@ -34,7 +35,7 @@ export default function LandingPage(props) {
       <Header
         color="transparent"
         routes={dashboardRoutes}
-        brand="YLSP"
+        brand={<Link to="/"><img src={require("assets/img/logo-worklab.png")} width={65} height={65}/></Link>}
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
