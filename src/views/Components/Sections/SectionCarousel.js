@@ -10,9 +10,12 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Card from "components/Card/Card.js";
 
-import image1 from "assets/img/medi.jpg";
-import image2 from "assets/img/law.jpg";
-import image3 from "assets/img/econ.jpg";
+import image1 from "assets/img/medicine.jpg";
+import image2 from "assets/img/judge.jpg";
+import image3 from "assets/img/finance.jpg";
+
+import image4 from "assets/img/engin.jpg";
+import image5 from "assets/img/hacker.jpg"
 
 import styles from "assets/jss/material-kit-react/views/componentsSections/carouselStyle.js";
 
@@ -21,10 +24,12 @@ const useStyles = makeStyles(styles);
 export default function SectionCarousel() {
   const classes = useStyles();
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
+    adaptiveHeight: true,
     speed: 500,
-    slidesToShow: 1,
+    centerMode: true,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: false
   };
@@ -32,7 +37,7 @@ export default function SectionCarousel() {
     <div className={classes.section}>
       <div className={classes.container}>
         <GridContainer>
-          <GridItem xs={12} sm={12} md={8} className={classes.marginAuto}>
+          <GridItem xs={12} sm={12} md={12} className={classes.marginAuto}>
             <Card carousel>
               <Carousel {...settings}>
                 <div>
@@ -63,6 +68,24 @@ export default function SectionCarousel() {
                     <h4>
                       <LocationOn className="slick-icons" />
                       Или можешь стать финансистом и управлять деньгами
+                    </h4>
+                  </div>
+                </div>
+                <div>
+                  <img src={image4} alt="Fourth slide" className="slick-image" />
+                  <div className="slick-caption">
+                    <h4>
+                      <LocationOn className="slick-icons" />
+                      Инженером и быть крутейшим
+                    </h4>
+                  </div>
+                </div>
+                <div>
+                  <img src={image5} alt="Fifth slide" className="slick-image" />
+                  <div className="slick-caption">
+                    <h4>
+                      <LocationOn className="slick-icons" />
+                      Или можешь быть просто программистом
                     </h4>
                   </div>
                 </div>

@@ -22,7 +22,7 @@ import CustomInput from "components/CustomInput/CustomInput.js";
 
 import styles from "assets/jss/material-kit-react/views/loginPage.js";
 
-import image from "assets/img/bg7.jpg";
+import image from "assets/img/thirdBack.jpg";
 
 const useStyles = makeStyles(styles);
 
@@ -38,7 +38,7 @@ export default function LoginPage(props) {
       <Header
         absolute
         color="transparent"
-        brand={<Link to="/"><img src={require("assets/img/logo-worklab.png")} width={65} height={65}/></Link>}
+        brand={<Link to="/"><img src={require("assets/img/logo-worklab.png")} width={75} height={75}/></Link>}
         rightLinks={<HeaderLinks />}
         {...rest}
       />
@@ -56,7 +56,7 @@ export default function LoginPage(props) {
               <Card className={classes[cardAnimaton]}>
                 <form className={classes.form}>
                   <CardHeader color="primary" className={classes.cardHeader}>
-                    <h4>Registration</h4>
+                    <h4>Регистрация через</h4>
                     <div className={classes.socialLine}>
                       <Button
                         justIcon
@@ -87,10 +87,25 @@ export default function LoginPage(props) {
                       </Button>
                     </div>
                   </CardHeader>
-                  <p className={classes.divider}>Or Be Classical</p>
+                  <p className={classes.divider}>Или</p>
                   <CardBody>
+                  <CustomInput
+                      labelText="Логин..."
+                      id="login"
+                      formControlProps={{
+                        fullWidth: true
+                      }}
+                      inputProps={{
+                        type: "text",
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <People className={classes.inputIconsColor} />
+                          </InputAdornment>
+                        )
+                      }}
+                    />
                     <CustomInput
-                      labelText="First Name..."
+                      labelText="Имя..."
                       id="first"
                       formControlProps={{
                         fullWidth: true
@@ -105,22 +120,7 @@ export default function LoginPage(props) {
                       }}
                     />
                     <CustomInput
-                      labelText="Last Name..."
-                      id="last"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                      inputProps={{
-                        type: "text",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <People className={classes.inputIconsColor} />
-                          </InputAdornment>
-                        )
-                      }}
-                    />
-                    <CustomInput
-                      labelText="Email..."
+                      labelText="Почта..."
                       id="email"
                       formControlProps={{
                         fullWidth: true
@@ -135,7 +135,7 @@ export default function LoginPage(props) {
                       }}
                     />
                     <CustomInput
-                      labelText="Password"
+                      labelText="Пароль..."
                       id="pass"
                       formControlProps={{
                         fullWidth: true
@@ -153,7 +153,7 @@ export default function LoginPage(props) {
                       }}
                     />
                     <CustomInput
-                      labelText="Confirm password"
+                      labelText="Повторите пароль..."
                       id="passConfirm"
                       formControlProps={{
                         fullWidth: true
@@ -173,7 +173,7 @@ export default function LoginPage(props) {
                   </CardBody>
                   <CardFooter className={classes.cardFooter}>
                     <Button simple color="primary" size="lg">
-                      Sign Up!
+                      Зарегистрироваться!
                     </Button>
                   </CardFooter>
                 </form>

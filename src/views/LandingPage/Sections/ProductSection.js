@@ -3,9 +3,16 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
 // @material-ui/icons
-import Chat from "@material-ui/icons/Chat";
-import VerifiedUser from "@material-ui/icons/VerifiedUser";
-import Fingerprint from "@material-ui/icons/Fingerprint";
+import Law from "@material-ui/icons/Gavel";
+import It from "@material-ui/icons/Computer";
+import Medicine from "@material-ui/icons/Healing";
+import SMM from "@material-ui/icons/MovieFilter";
+import Journal from "@material-ui/icons/Search";
+import InternRel from "@material-ui/icons/Public";
+import Finance from "@material-ui/icons/AttachMoney";
+import Arch from "@material-ui/icons/AccountBalance";
+import Math from "@material-ui/icons/Functions";
+
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
@@ -21,42 +28,92 @@ export default function ProductSection() {
     <div className={classes.section}>
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
-          <h2 className={classes.title}>Let{"'"}s talk product</h2>
+          <h2 className={classes.title}>Что такое Worklab</h2>
           <h5 className={classes.description}>
-            This is the paragraph where you can write more details about your
-            product. Keep you user engaged by providing meaningful information.
-            Remember that by this time, the user is curious, otherwise he wouldn
-            {"'"}t scroll to get here. Add a button if you want the user to see
-            more.
+          Это масштабный долгосрочный социальный проект,
+          направленный на создание сайта-симулятора по профориентации для мололежи, 
+          а также на достижение Целей устойчивого развития (ЦУР-4 - Качественное образование)
           </h5>
+        </GridItem>
+        <GridItem xs={12} sm={12} md={8}>
+          <h3 className={classes.title}>Цель проекта</h3>
+          <h5 className={classes.description}>
+             Помочь молодежи <b>ВОВРЕМЯ</b> определиться со своей профессией! 
+          </h5>
+          <h4 className={classes.description}>
+            Worklab работает со всеми направлениями, включая
+          </h4>
         </GridItem>
       </GridContainer>
       <div>
         <GridContainer>
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
-              title="Free Chat"
-              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-              icon={Chat}
-              iconColor="info"
+              title="Юриспруденция"
+              icon={Law}
+              iconColor="danger"
               vertical
             />
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
-              title="Verified Users"
-              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-              icon={VerifiedUser}
+              title="Медицина"
+              icon={Medicine}
               iconColor="success"
               vertical
             />
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
-              title="Fingerprint"
-              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-              icon={Fingerprint}
+              title="IT"
+              icon={It}
+              iconColor="info"
+              vertical
+            />
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4}>
+            <InfoArea
+              title="Журналистика"
+              icon={Journal}
+              iconColor="warning"
+              vertical
+            />
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4}>
+            <InfoArea
+              title="SMM, графический дизайн и анимация"
+              icon={SMM}
               iconColor="danger"
+              vertical
+            />
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4}>
+            <InfoArea
+              title="Международные отношения"
+              icon={InternRel}
+              iconColor="success"
+              vertical
+            />
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4}>
+            <InfoArea
+              title="Архитектура, дизайн и строительство"
+              icon={Arch}
+              vertical
+            />
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4}>
+            <InfoArea
+              title="Экономика и финансы"
+              icon={Finance}
+              iconColor="success"
+              vertical
+            />
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4}>
+            <InfoArea
+              title="Естественно-технические науки"
+              icon={Math}
               vertical
             />
           </GridItem>

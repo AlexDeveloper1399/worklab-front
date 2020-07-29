@@ -22,7 +22,7 @@ import CustomInput from "components/CustomInput/CustomInput.js";
 
 import styles from "assets/jss/material-kit-react/views/loginPage.js";
 
-import image from "assets/img/bg7.jpg";
+import image from "assets/img/thirdBack.jpg";
 
 const useStyles = makeStyles(styles);
 
@@ -38,7 +38,7 @@ export default function LoginPage(props) {
       <Header
         absolute
         color="transparent"
-        brand={<Link to="/"><img src={require("assets/img/logo-worklab.png")} width={65} height={65}/></Link>}
+        brand={<Link to="/"><img src={require("assets/img/logo-worklab.png")} width={75} height={75}/></Link>}
         rightLinks={<HeaderLinks />}
         {...rest}
       />
@@ -56,7 +56,7 @@ export default function LoginPage(props) {
               <Card className={classes[cardAnimaton]}>
                 <form className={classes.form}>
                   <CardHeader color="primary" className={classes.cardHeader}>
-                    <h4>Login</h4>
+                    <h4>Войти через</h4>
                     <div className={classes.socialLine}>
                       <Button
                         justIcon
@@ -87,11 +87,11 @@ export default function LoginPage(props) {
                       </Button>
                     </div>
                   </CardHeader>
-                  <p className={classes.divider}>Or Be Classical</p>
+                  <p className={classes.divider}>Или</p>
                   <CardBody>
                     <CustomInput
-                      labelText="First Name..."
-                      id="first"
+                      labelText="Логин..."
+                      id="login"
                       formControlProps={{
                         fullWidth: true
                       }}
@@ -105,22 +105,7 @@ export default function LoginPage(props) {
                       }}
                     />
                     <CustomInput
-                      labelText="Email..."
-                      id="email"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                      inputProps={{
-                        type: "email",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <Email className={classes.inputIconsColor} />
-                          </InputAdornment>
-                        )
-                      }}
-                    />
-                    <CustomInput
-                      labelText="Password"
+                      labelText="Пароль..."
                       id="pass"
                       formControlProps={{
                         fullWidth: true
@@ -140,7 +125,7 @@ export default function LoginPage(props) {
                   </CardBody>
                   <CardFooter className={classes.cardFooter}>
                     <Button simple color="primary" size="lg">
-                      Get started
+                      Войти
                     </Button>
                   </CardFooter>
                   <p className={classes.divider}>Нет аккаунта? <Link to="registration-page">Зарегистрируйся</Link></p>

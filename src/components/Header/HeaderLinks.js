@@ -69,7 +69,9 @@ export default function HeaderLinks(props) {
           target="_blank"
           className={classes.navLink}
         >
-           Контакты
+           <Link to="/contacts" className={classes.navLinkWork}>
+             Контакты
+           </Link>
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -79,7 +81,9 @@ export default function HeaderLinks(props) {
           target="_blank"
           className={classes.navLink}
         >
-           О нас
+          <Link to="/about-us" className={classes.navLinkWork}>
+            О нас
+          </Link>
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -114,7 +118,7 @@ export default function HeaderLinks(props) {
         >
           <Button
             color="transparent"
-            href=""
+            href="https://www.facebook.com/ylsp.2020/"
             target="_blank"
             className={classes.navLink}
           >
@@ -131,7 +135,7 @@ export default function HeaderLinks(props) {
         >
           <Button
             color="transparent"
-            href=""
+            href="https://www.instagram.com/ylsp_teamkg/"
             target="_blank"
             className={classes.navLink}
           >
