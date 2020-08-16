@@ -30,7 +30,7 @@ export default function ProductSection() {
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
               title="Instagram"
-              description={<p>Следи за нами и следи за событиями <a href="https://www.instagram.com/ylsp_teamkg/">здесь</a></p>}
+              description={<p>Следи за нами и за событиями <a href="https://www.instagram.com/ylsp_teamkg/">здесь</a></p>}
               icon={Instagram}
               iconColor="rose"
               vertical

@@ -32,9 +32,9 @@ export default function LandingPage(props) {
   return (
     <div>
       <Header
-        color="transparent"
+        color="white"
         routes={dashboardRoutes}
-        brand={<Link to="/"><img src={require("assets/img/logo-worklab.png")} width={75} height={75}/></Link>}
+        brand={<Link to="/"><img src={require("assets/img/logo-worklab-usual.png")} width={75} height={75}/></Link>}
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{

@@ -37,8 +37,8 @@ export default function LoginPage(props) {
     <div>
       <Header
         absolute
-        color="transparent"
-        brand={<Link to="/"><img src={require("assets/img/logo-worklab.png")} width={75} height={75}/></Link>}
+        color="white"
+        brand={<Link to="/"><img src={require("assets/img/logo-worklab-usual.png")} width={75} height={75}/></Link>}
         rightLinks={<HeaderLinks />}
         {...rest}
       />

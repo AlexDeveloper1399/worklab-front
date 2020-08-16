@@ -47,8 +47,8 @@ export default function ProfilePage(props) {
   return (
     <div>
       <Header
-        color="transparent"
-        brand={<Link to="/"><img src={require("assets/img/logo-worklab.png")} width={65} height={65}/></Link>}
+        color="white"
+        brand={<Link to="/"><img src={require("assets/img/logo-worklab-usual.png")} width={75} height={75}/></Link>}
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{

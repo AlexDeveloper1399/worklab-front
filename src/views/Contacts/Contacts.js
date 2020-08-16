@@ -30,10 +30,10 @@ export default function Components(props) {
   return (
     <div>
       <Header
-        brand={<Link to="/"><img src={require("assets/img/logo-worklab.png")} width={75} height={75}/></Link>}
+        brand={<Link to="/"><img src={require("assets/img/logo-worklab-usual.png")} width={75} height={75}/></Link>}
         rightLinks={<HeaderLinks />}
         fixed
-        color="transparent"
+        color="white"
         changeColorOnScroll={{
           height: 400,
           color: "white"

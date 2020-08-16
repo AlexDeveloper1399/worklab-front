@@ -23,18 +23,19 @@
   }
 
   .slick-caption {
-    padding-bottom: 35px;
+    padding-bottom: 25px;
     padding-right: 35px;
     position: absolute;
     right: 15%;
     bottom: 10px;
     left: 15%;
     z-index: 10;
-    padding-top: 20px;
-    color: #ffffff;
+    padding-top: 30px;
+    color: #2f313d;
     text-align: center;
     z-index: 3;
     display: none;
+    font-family: cursive;
   }
   .slick-slide {
     > div:first-child {
@@ -47,12 +48,11 @@
   }
   .slick-image {
     width: 100% !important;
-    max-width: 200px;
+    max-width: 150px;
     display: inline-flex !important;
     border-radius: 50%;
     margin-top: 5%;
     margin-bottom: 5%;
-    box-shadow: 2px 2px 2px 2px;
   }
 }
 
