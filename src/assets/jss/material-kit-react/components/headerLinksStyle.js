@@ -40,7 +40,9 @@ const headerLinksStyle = theme => ({
     color: "inherit",
     position: "relative",
     padding: "0.9375rem",
-    fontWeight: "400",
+    fontWeight: "450",
+    boxShadow:
+      "1px 0 1px 0 rgba(255, 173, 173, 1), 3px 1px 1px -2px rgba(0, 0, 0, 0.2), 7px 1px 5px 0 rgba(0, 0, 0, 0.12)",
     fontSize: "12px",
     textTransform: "uppercase",
     borderRadius: "3px",
@@ -89,6 +91,9 @@ const headerLinksStyle = theme => ({
   navLinkActive: {
     color: "inherit",
     backgroundColor: "rgba(255, 255, 255, 0.1)"
+  },
+  navLinkWork: {
+    color: "inherit"
   },
   icons: {
     width: "20px",

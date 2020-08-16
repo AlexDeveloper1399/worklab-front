@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
@@ -46,8 +47,8 @@ export default function ProfilePage(props) {
   return (
     <div>
       <Header
-        color="transparent"
-        brand="YLSP"
+        color="white"
+        brand={<Link to="/"><img src={require("assets/img/logo-worklab-usual.png")} width={75} height={75}/></Link>}
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{

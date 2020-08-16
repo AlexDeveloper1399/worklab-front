@@ -23,17 +23,19 @@
   }
 
   .slick-caption {
-    padding-bottom: 45px;
+    padding-bottom: 25px;
+    padding-right: 35px;
     position: absolute;
     right: 15%;
-    bottom: 20px;
+    bottom: 10px;
     left: 15%;
     z-index: 10;
-    padding-top: 20px;
-    color: #ffffff;
+    padding-top: 30px;
+    color: #2f313d;
     text-align: center;
     z-index: 3;
     display: none;
+    font-family: cursive;
   }
   .slick-slide {
     > div:first-child {
@@ -46,7 +48,11 @@
   }
   .slick-image {
     width: 100% !important;
+    max-width: 150px;
     display: inline-flex !important;
+    border-radius: 50%;
+    margin-top: 5%;
+    margin-bottom: 5%;
   }
 }
 
@@ -56,7 +62,8 @@
   display: block;
   overflow: hidden;
 
-  margin: 0;
+  max-height: 400px;
+  margin: 0 -20px;
   padding: 0;
 }
 .slick-list:focus {
@@ -99,6 +106,7 @@
 }
 
 .slick-slide {
+  margin: 0 20px;
   display: none;
   float: left;
 
@@ -155,7 +163,7 @@ button.slick-arrow.slick-next {
   opacity: 0.5;
 }
 .slick-prev {
-  left: 0;
+  left: -50px;
   &::before {
     content: "\f053";
     font-weight: 600;
@@ -167,13 +175,13 @@ button.slick-arrow.slick-next {
     font-variant: normal;
     text-rendering: auto;
     line-height: 1;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 30px;
     width: 100%;
   }
 }
 .slick-next {
-  right: 0;
+  right: -50px;
   &::before {
     content: "\f054";
     font-weight: 600;
@@ -185,7 +193,7 @@ button.slick-arrow.slick-next {
     font-variant: normal;
     text-rendering: auto;
     line-height: 1;
-    color: #fff;
+    color: rgb(0, 0, 0);
     font-size: 30px;
     width: 100%;
   }
@@ -208,8 +216,8 @@ button.slick-arrow.slick-next {
 }
 .slick-dots li,
 .slick-dots li button {
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   cursor: pointer;
 }
 .slick-dots li {

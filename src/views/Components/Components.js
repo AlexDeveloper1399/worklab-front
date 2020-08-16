@@ -40,10 +40,13 @@ export default function Components(props) {
   return (
     <div>
       <Header
-        brand="YLSP"
+        brand={<Link to="/">
+          <img src={require("assets/img/logo-worklab-usual.png")} 
+          width={75} height={75}/>
+          </Link>}
         rightLinks={<HeaderLinks />}
         fixed
-        color="transparent"
+        color="white"
         changeColorOnScroll={{
           height: 400,
           color: "white"
@@ -57,7 +60,7 @@ export default function Components(props) {
               <div className={classes.brand}>
                 <h1 className={classes.title}>WorkLab</h1>
                 <h3 className={classes.subtitle}>
-                  Выбирая профессию ты выбираешь свое будущее.
+                  Выбирая профессию ты выбираешь свое будущее
                 </h3>
               </div>
             </GridItem>
@@ -66,7 +69,16 @@ export default function Components(props) {
       </Parallax>
 
       <div className={classNames(classes.main, classes.mainRaised)}>
-         <SectionBasics />
+        <div className={classes.container}>
+          <div className={classes.section}>
+            <GridContainer justify="center">
+              <GridItem cs={12} sm={12} md={8}>
+                <h2 style={{justifyContent: "center", textAlign: "center"}}>Ты можешь стать</h2>
+              </GridItem>
+            </GridContainer>
+          </div>
+          <SectionCarousel />
+        </div>
         {/*<SectionNavbars />
         <SectionTabs />
         <SectionPills />

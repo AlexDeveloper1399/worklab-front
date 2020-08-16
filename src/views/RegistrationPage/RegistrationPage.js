@@ -56,7 +56,7 @@ export default function LoginPage(props) {
               <Card className={classes[cardAnimaton]}>
                 <form className={classes.form}>
                   <CardHeader color="primary" className={classes.cardHeader}>
-                    <h4>Войти через</h4>
+                    <h4>Регистрация через</h4>
                     <div className={classes.socialLine}>
                       <Button
                         justIcon
@@ -89,7 +89,7 @@ export default function LoginPage(props) {
                   </CardHeader>
                   <p className={classes.divider}>Или</p>
                   <CardBody>
-                    <CustomInput
+                  <CustomInput
                       labelText="Логин..."
                       id="login"
                       formControlProps={{
@@ -100,6 +100,36 @@ export default function LoginPage(props) {
                         endAdornment: (
                           <InputAdornment position="end">
                             <People className={classes.inputIconsColor} />
+                          </InputAdornment>
+                        )
+                      }}
+                    />
+                    <CustomInput
+                      labelText="Имя..."
+                      id="first"
+                      formControlProps={{
+                        fullWidth: true
+                      }}
+                      inputProps={{
+                        type: "text",
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <People className={classes.inputIconsColor} />
+                          </InputAdornment>
+                        )
+                      }}
+                    />
+                    <CustomInput
+                      labelText="Почта..."
+                      id="email"
+                      formControlProps={{
+                        fullWidth: true
+                      }}
+                      inputProps={{
+                        type: "email",
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <Email className={classes.inputIconsColor} />
                           </InputAdornment>
                         )
                       }}
@@ -122,14 +152,30 @@ export default function LoginPage(props) {
                         autoComplete: "off"
                       }}
                     />
+                    <CustomInput
+                      labelText="Повторите пароль..."
+                      id="passConfirm"
+                      formControlProps={{
+                        fullWidth: true
+                      }}
+                      inputProps={{
+                        type: "password",
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <Icon className={classes.inputIconsColor}>
+                              lock_outline
+                            </Icon>
+                          </InputAdornment>
+                        ),
+                        autoComplete: "off"
+                      }}
+                    />
                   </CardBody>
                   <CardFooter className={classes.cardFooter}>
                     <Button simple color="primary" size="lg">
-                      Войти
+                      Зарегистрироваться!
                     </Button>
                   </CardFooter>
-                  <p className={classes.divider}>Нет аккаунта? <Link to="registration-page">Зарегистрируйся</Link></p>
-
                 </form>
               </Card>
             </GridItem>

@@ -1,75 +1,63 @@
 import React from "react";
-import { Link } from "react-router-dom";
 // nodejs library that concatenates classes
 import classNames from "classnames";
+// react components for routing our app without refresh
+import { Link } from "react-router-dom";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-
 // @material-ui/icons
-
 // core components
 import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Button from "components/CustomButtons/Button.js";
-import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
+// sections for this page
+import HeaderLinks from "components/Header/HeaderLinks.js";
+import WorkSection from "./Sections/WorkSection.js";
+import Addresses from "./Sections/Addresses.js";
 
-import styles from "assets/jss/material-kit-react/views/landingPage.js";
+// import SectionContent from "./Sections/SectionContent.js";
 
-// Sections for this page
-import ProductSection from "./Sections/ProductSection.js";
-import TeamSection from "./Sections/TeamSection.js";
 
-const dashboardRoutes = [];
+import styles from "assets/jss/material-kit-react/views/components.js";
 
 const useStyles = makeStyles(styles);
 
-export default function LandingPage(props) {
+export default function Components(props) {
   const classes = useStyles();
   const { ...rest } = props;
   return (
     <div>
       <Header
-        color="white"
-        routes={dashboardRoutes}
         brand={<Link to="/"><img src={require("assets/img/logo-worklab-usual.png")} width={75} height={75}/></Link>}
         rightLinks={<HeaderLinks />}
         fixed
+        color="white"
         changeColorOnScroll={{
           height: 400,
           color: "white"
         }}
         {...rest}
       />
-      <Parallax filter image={require("assets/img/back.jpg")}>
+      <Parallax image={require("assets/img/back.jpg")}>
         <div className={classes.container}>
           <GridContainer>
-            <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>Young Leaders for Social Progress</h1>
-              <h4>
-                Общественная платформа
-              </h4>
-              <br />
-              <Button
-                color="danger"
-                size="lg"
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ref=creativetim"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fas fa-play" />
-                Watch video
-              </Button>
+            <GridItem>
+              <div className={classes.brand}>
+                <h1 className={classes.title}>WorkLab</h1>
+                <h3 className={classes.subtitle}>
+                  Выбирая профессию ты выбираешь свое будущее.
+                </h3>
+              </div>
             </GridItem>
           </GridContainer>
         </div>
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-          <ProductSection />
-          <TeamSection />
+          <Addresses/>
+          <WorkSection/>
         </div>
       </div>
       <Footer />

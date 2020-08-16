@@ -7,7 +7,8 @@ import classNames from "classnames";
 // material-ui core components
 import { List, ListItem } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-
+import Button from "components/CustomButtons/Button.js";
+import Tooltip from "@material-ui/core/Tooltip";
 // @material-ui/icons
 import Favorite from "@material-ui/icons/Favorite";
 
@@ -32,40 +33,55 @@ export default function Footer(props) {
         <div className={classes.left}>
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
-              <a
-                href=""
-                className={classes.block}
-                target="_blank"
+              <Tooltip
+                id="instagram-facebook"
+                title="Follow us on facebook"
+                placement={window.innerWidth > 959 ? "top" : "left"}
+                classes={{ tooltip: classes.tooltip }}
               >
-                Creative Tim
-              </a>
+                <Button
+                  color="transparent"
+                  href="https://www.facebook.com/ylsp.2020/"
+                  target="_blank"
+                  className={classes.navLink}
+                >
+                  <i className={classes.socialIcons + " fab fa-facebook"} />
+                </Button>
+              </Tooltip>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a
-                href=""
-                className={classes.block}
-                target="_blank"
+              <Tooltip
+                id="instagram-tooltip"
+                title="Follow us on instagram"
+                placement={window.innerWidth > 959 ? "top" : "left"}
+                classes={{ tooltip: classes.tooltip }}
               >
-                About us
-              </a>
+                <Button
+                  color="transparent"
+                  href="https://www.instagram.com/ylsp_teamkg/"
+                  target="_blank"
+                  className={classes.navLink}
+                >
+                  <i className={classes.socialIcons + " fab fa-instagram"} />
+                </Button>
+              </Tooltip>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a
-                href=""
-                className={classes.block}
-                target="_blank"
+              <Tooltip
+                id="telegram"
+                title="Follow us on telegram"
+                placement={window.innerWidth > 959 ? "top" : "left"}
+                classes={{ tooltip: classes.tooltip }}
               >
-                Blog
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href=""
-                className={classes.block}
-                target="_blank"
-              >
-                Licenses
-              </a>
+                <Button
+                  href=""
+                  target="_blank"
+                  color="transparent"
+                  className={classes.navLink}
+                >
+                  <i className={classes.socialIcons + " fab fa-telegram"} />
+                </Button>
+              </Tooltip>
             </ListItem>
           </List>
         </div>
